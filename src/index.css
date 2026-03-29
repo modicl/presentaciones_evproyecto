@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Dark theme (default) ─────────────────────────────── */
+:root {
+  --bg:          #1A1A1A;
+  --bg-card:     #222222;
+  --bg-right:    #111111;
+  --border:      #2A2A2A;
+  --text:        #FFFFFF;
+  --text-muted:  #AAAAAA;
+  --text-label:  #888888;
+  --text-dim:    #555555;
+}
+
+/* ── Light theme ──────────────────────────────────────── */
+.theme-light {
+  --bg:          #F4F6FA;
+  --bg-card:     #FFFFFF;
+  --bg-right:    #E8EEF8;
+  --border:      #DDE3EC;
+  --text:        #1A1A1A;
+  --text-muted:  #374151;
+  --text-label:  #6B7280;
+  --text-dim:    #9CA3AF;
+}
