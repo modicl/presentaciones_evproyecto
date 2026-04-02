@@ -26,7 +26,7 @@ const SLIDES = [
 
 export default function App() {
   const [current, setCurrent] = useState(0)
-  const [light, setLight] = useState(false)
+  const [light, setLight] = useState(true)
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
