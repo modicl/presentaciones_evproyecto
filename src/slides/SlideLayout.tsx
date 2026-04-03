@@ -24,7 +24,6 @@ export default function SlideLayout({
       className="relative w-full h-full flex overflow-hidden"
       style={{ backgroundColor: 'var(--bg)' }}
     >
-      {/* Left accent bar */}
       <div
         className="absolute left-0 top-0 bottom-0 w-1.5 z-10"
         style={{ backgroundColor: accentColor }}
@@ -50,10 +49,7 @@ export default function SlideLayout({
       {/* Right column — big stat */}
       <div
         className="flex flex-col justify-center items-center flex-[2] border-l gap-3 px-8"
-        style={{
-          backgroundColor: 'var(--bg-right)',
-          borderColor: 'var(--border)',
-        }}
+        style={{ backgroundColor: 'var(--bg-right)', borderColor: 'var(--border)' }}
       >
         <span
           className="font-heading font-bold leading-none text-center"

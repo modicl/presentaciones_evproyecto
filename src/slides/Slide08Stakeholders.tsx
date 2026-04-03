@@ -20,34 +20,34 @@ function Dots({ value, color }: { value: number; color: string }) {
 export default function Slide08Stakeholders() {
   return (
     <div
-      className="relative w-full h-full flex flex-col justify-center px-14 py-8 overflow-hidden"
+      className="relative w-full h-full flex flex-col justify-center px-16 py-10 overflow-hidden"
       style={{ backgroundColor: 'var(--bg)' }}
     >
       <div className="absolute left-0 top-0 bottom-0 w-1.5" style={{ backgroundColor: COLOR }} />
 
-      {/* Header */}
-      <div className="text-center mb-6">
-        <p className="font-body text-sm tracking-[0.25em] uppercase mb-1" style={{ color: COLOR }}>Interesados — Parte 1 / 2</p>
-        <h2 className="font-heading text-5xl font-bold" style={{ color: 'var(--text)' }}>Stakeholders Internos</h2>
-        <p className="font-body text-base mt-2" style={{ color: 'var(--text-dim)' }}>
-          <strong style={{ color: 'var(--text-label)' }}>P</strong> = Poder (1–5) &nbsp;·&nbsp;
-          <strong style={{ color: 'var(--text-label)' }}>I</strong> = Interés (1–5)
-        </p>
-      </div>
+      <p className="font-body text-sm tracking-[0.25em] uppercase mb-3" style={{ color: COLOR }}>
+        Interesados — Parte 1 / 2
+      </p>
+      <h2 className="font-heading text-5xl font-bold mb-2" style={{ color: 'var(--text)' }}>
+        Stakeholders Internos
+      </h2>
+      <p className="font-body text-base mb-6" style={{ color: 'var(--text-dim)' }}>
+        <strong style={{ color: 'var(--text-label)' }}>P</strong> = Poder (1–5) &nbsp;·&nbsp;
+        <strong style={{ color: 'var(--text-label)' }}>I</strong> = Interés (1–5)
+      </p>
 
-      {/* Cards */}
       <div className="flex flex-col gap-4">
         {INTERNOS.map(({ name, power, interest, strategy }) => (
           <div
             key={name}
-            className="rounded-lg px-5 py-4 border flex gap-4 items-center"
+            className="rounded-lg px-5 py-4 border flex gap-6 items-center"
             style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', borderLeftColor: COLOR, borderLeftWidth: '3px' }}
           >
             <div className="flex-1 min-w-0">
               <p className="font-body text-xl font-bold leading-tight" style={{ color: 'var(--text)' }}>{name}</p>
               <p className="font-body text-lg mt-1" style={{ color: 'var(--text-label)' }}>{strategy}</p>
             </div>
-            <div className="shrink-0 flex flex-col gap-2 items-end">
+            <div className="shrink-0 flex gap-6">
               <div className="flex items-center gap-2">
                 <span className="font-body text-base font-bold" style={{ color: 'var(--text-dim)' }}>P</span>
                 <Dots value={power} color={COLOR} />
@@ -59,11 +59,6 @@ export default function Slide08Stakeholders() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="text-center mt-5">
-        <span className="font-heading text-4xl font-bold" style={{ color: COLOR }}>4</span>
-        <span className="font-body text-base uppercase tracking-widest ml-3" style={{ color: 'var(--text-dim)' }}>actores internos</span>
       </div>
     </div>
   )

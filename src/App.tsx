@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { downloadPdf } from './pdf/downloadPdf'
 import duocLogo from './assets/Logo_DuocUC.svg'
 import Slide01Portada from './slides/Slide01Portada'
 import Slide02Contexto from './slides/Slide02Contexto'
@@ -29,6 +30,8 @@ const SLIDES = [
 export default function App() {
   const [current, setCurrent] = useState(0)
   const [light, setLight] = useState(false)
+  const [pdfStatus, setPdfStatus] = useState<string | null>(null)
+  const generatingRef = useRef(false)
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -79,6 +82,41 @@ export default function App() {
           style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-label)' }}
         >
           {light ? '🌙 Oscuro' : '☀️ Claro'}
+        </button>
+
+        <button
+          disabled={!!pdfStatus}
+          title="Descargar presentación como PDF"
+          onClick={async () => {
+            if (generatingRef.current) return
+            generatingRef.current = true
+            try {
+              await downloadPdf(msg => setPdfStatus(msg))
+            } finally {
+              setPdfStatus(null)
+              generatingRef.current = false
+            }
+          }}
+          className="flex items-center gap-1.5 font-body text-xs px-2.5 py-1 rounded-full border transition-colors select-none disabled:opacity-60"
+          style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-label)', cursor: pdfStatus ? 'wait' : 'pointer' }}
+        >
+          {pdfStatus ? (
+            <>
+              <svg height="12" width="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-spin" aria-hidden="true">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+              </svg>
+              {pdfStatus}
+            </>
+          ) : (
+            <>
+              <svg height="13" width="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              PDF
+            </>
+          )}
         </button>
 
         <a

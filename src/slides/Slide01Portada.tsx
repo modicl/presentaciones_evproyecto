@@ -29,10 +29,7 @@ export default function Slide01Portada() {
         </div>
         <div className="font-body space-y-3">
           <p className="font-bold text-base" style={{ color: 'var(--text-muted)' }}>Integrantes</p>
-          <div
-            className="grid grid-cols-2 gap-x-10 gap-y-1.5 text-lg"
-            style={{ color: 'var(--text-label)' }}
-          >
+          <div className="grid grid-cols-2 gap-x-10 gap-y-1.5 text-lg" style={{ color: 'var(--text-label)' }}>
             <span>Javier Arancibia</span>
             <span>Luciano Riveros</span>
             <span>Danilo Quiroz</span>
