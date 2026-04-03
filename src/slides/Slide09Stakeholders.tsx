@@ -2,7 +2,6 @@ const STAKEHOLDERS = [
   { cat: 'Conectado', name: 'MINSAL — Depto. TIC / SIDRA',                  power: 5, interest: 3, strategy: 'Cumplimiento HL7 FHIR y seguridad en cada hito certificable.' },
   { cat: 'Conectado', name: 'Proveedores Legacy IT',                        power: 5, interest: 3, strategy: 'SLAs estrictos con penalizaciones por incumplimiento de integración.' },
   { cat: 'Conectado', name: 'Proveedores Cloud',                            power: 4, interest: 3, strategy: 'Estrategia multi-cloud para mitigar riesgo de vendor lock-in.' },
-  { cat: 'Conectado', name: 'Contraloría General (CGR)',                    power: 4, interest: 4, strategy: 'Logs de auditoría accesibles para fiscalización en tiempo real.' },
   { cat: 'Externo',   name: 'Agrupaciones de Pacientes y Sociedad Civil',   power: 3, interest: 5, strategy: 'Portal del Paciente con criterios de priorización transparentes.' },
   { cat: 'Externo',   name: 'Medios de Comunicación Regionales',            power: 3, interest: 4, strategy: 'Comunicación con métricas de impacto social publicables.' },
   { cat: 'Externo',   name: 'Municipios y Gobernaciones Regionales',        power: 3, interest: 4, strategy: 'Coordinación para acceso a CESFAM e instalación de Kioskos.' },
@@ -75,7 +74,7 @@ export default function Slide09Stakeholders() {
       </div>
 
       <div className="text-center mt-5">
-        <span className="font-heading text-4xl font-bold text-duoc-blue">7</span>
+        <span className="font-heading text-4xl font-bold text-duoc-blue">6</span>
         <span className="font-body text-base uppercase tracking-widest ml-3" style={{ color: 'var(--text-dim)' }}>actores conectados y externos</span>
       </div>
     </div>
