@@ -8,8 +8,9 @@ import Slide05Pestel from './slides/Slide05Pestel'
 import Slide06Objetivos from './slides/Slide06Objetivos'
 import Slide07Producto from './slides/Slide07Producto'
 import Slide08Stakeholders from './slides/Slide08Stakeholders'
-import Slide09PropuestaValor from './slides/Slide09PropuestaValor'
-import Slide10Conclusiones from './slides/Slide10Conclusiones'
+import Slide09Stakeholders from './slides/Slide09Stakeholders'
+import Slide10PropuestaValor from './slides/Slide10PropuestaValor'
+import Slide11Conclusiones from './slides/Slide11Conclusiones'
 
 const SLIDES = [
   Slide01Portada,
@@ -20,13 +21,14 @@ const SLIDES = [
   Slide06Objetivos,
   Slide07Producto,
   Slide08Stakeholders,
-  Slide09PropuestaValor,
-  Slide10Conclusiones,
+  Slide09Stakeholders,
+  Slide10PropuestaValor,
+  Slide11Conclusiones,
 ]
 
 export default function App() {
   const [current, setCurrent] = useState(0)
-  const [light, setLight] = useState(true)
+  const [light, setLight] = useState(false)
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -74,11 +76,7 @@ export default function App() {
           onClick={() => setLight(l => !l)}
           title={light ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro'}
           className="flex items-center gap-1.5 font-body text-xs px-2.5 py-1 rounded-full border transition-colors select-none"
-          style={{
-            backgroundColor: 'var(--bg-card)',
-            borderColor: 'var(--border)',
-            color: 'var(--text-label)',
-          }}
+          style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-label)' }}
         >
           {light ? '🌙 Oscuro' : '☀️ Claro'}
         </button>
@@ -89,11 +87,7 @@ export default function App() {
           rel="noopener noreferrer"
           title="Ver repositorio en GitHub"
           className="flex items-center gap-1.5 font-body text-xs px-2.5 py-1 rounded-full border transition-colors select-none"
-          style={{
-            backgroundColor: 'var(--bg-card)',
-            borderColor: 'var(--border)',
-            color: 'var(--text-label)',
-          }}
+          style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-label)' }}
         >
           <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
