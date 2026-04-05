@@ -59,7 +59,7 @@ export default function Slide08Stakeholders() {
               >
                 <div className="flex-1 min-w-0">
                   <p className="font-body text-base font-bold leading-tight" style={{ color: 'var(--text)' }}>{name}</p>
-                  <p className="font-body text-sm mt-0.5" style={{ color: 'var(--text-label)' }}>{strategy}</p>
+                  <p className="font-body text-base mt-0.5" style={{ color: 'var(--text-label)' }}>{strategy}</p>
                 </div>
                 <div className="shrink-0 flex gap-3">
                   <div className="flex items-center gap-1.5">

@@ -48,8 +48,8 @@ export default function Slide04Porter() {
               </span>
               <p className="font-body text-lg font-bold" style={{ color: 'var(--text)' }}>{force}</p>
             </div>
-            <p className="font-body text-base mb-2" style={{ color: 'var(--text-label)' }}>{note}</p>
-            <p className="font-body text-base font-bold" style={{ color }}>{implication}</p>
+            <p className="font-body text-lg mb-2" style={{ color: 'var(--text-label)' }}>{note}</p>
+            <p className="font-body text-lg font-bold" style={{ color }}>{implication}</p>
           </div>
         ))}
 

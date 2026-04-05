@@ -51,7 +51,7 @@ export default function Slide05Pestel() {
             </span>
             <div>
               <p className="font-body text-lg font-bold mb-0.5" style={{ color: 'var(--text)' }}>{headline}</p>
-              <p className="font-body text-base" style={{ color: 'var(--text-label)' }}>{desc}</p>
+              <p className="font-body text-lg" style={{ color: 'var(--text-label)' }}>{desc}</p>
             </div>
           </div>
         ))}
