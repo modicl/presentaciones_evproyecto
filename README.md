@@ -1,36 +1,64 @@
-# Evaluación de Proyectos — Quinto Semestre
+# Presentaciones Interactivas Web — Quinto Semestre
 
-Este repositorio contiene las presentaciones del ramo **Evaluación de Proyectos** correspondiente al quinto semestre de la carrera en Duoc UC, Escuela de Informática y Telecomunicaciones.
+Este repositorio contiene un sistema interactivo de presentaciones web creado para la entrega de evaluaciones y exposiciones del quinto semestre de la carrera en Duoc UC (Escuela de Informática y Telecomunicaciones). 
 
-## Integrantes
+El proyecto cuenta con un portal o **Menú Principal** desde el cual se pueden seleccionar múltiples presentaciones.
+
+## 📚 Presentaciones Incluidas
+
+Actualmente el repositorio alberga el material de las siguientes asignaturas:
+
+1. **Evaluación de Proyectos**
+   - **Contenido:** EP1 — Caso de Estudio: Servicio Público de Salud RedNorte. Analiza el diseño de un ecosistema digital, incluyendo análisis de Porter, PESTEL, objetivos, arquitectura de solución y stakeholders.
+   - **Docente:** Andrés Santoro Del Campo
+
+2. **Fullstack III**
+   - **Contenido:** Presentación EP1 - P.R.I.S.M.A. Introducción y análisis sobre el uso y las ventajas de Prisma ORM.
+
+## 🧑‍💻 Integrantes
 
 - Javier Arancibia
 - Luciano Riveros
 - Danilo Quiroz
 - Felipe Villarroel
 
-**Docente:** Andrés Santoro Del Campo
+---
+
+## 🚀 Cómo Ejecutar Localmente
+
+Sigue estos pasos para correr el sistema de presentaciones en tu entorno local:
+
+1. **Instalar las dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Levantar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Visualizar la aplicación:**
+   Abre [http://localhost:5173](http://localhost:5173) en tu navegador preferido. Al ingresar, se te cargará el **Menú Principal**, donde podrás escoger y entrar en cualquiera de las presentaciones alojadas utilizando la interfaz.
 
 ---
 
-## Presentaciones
+## ⚙️ Uso y Navegación
 
-### EP1 — Caso de Estudio: Servicio Público de Salud RedNorte
+El sistema está diseñado para ser de fácil lectura y transición en forma de "diapositivas". Una vez dentro de cualquier presentación, cuentas con los siguientes controles:
 
-Presentación interactiva de slides web para el informe de avance EP1. Analiza el diseño de un ecosistema digital para el Servicio de Salud RedNorte, incluyendo análisis de Porter, PESTEL, objetivos, arquitectura de solución y stakeholders.
+- **Avanzar:** Presiona la flecha derecha (`→`) o el control lateral derecho de la pantalla para ir a la siguiente slide.
+- **Retroceder:** Presiona la flecha izquierda (`←`) o el control lateral izquierdo de la pantalla para volver a la slide anterior.
+- **Temas (Modo Oscuro):** Haz clic en el botón `☀️ Claro` / `🌙 Oscuro` ubicado en la esquina inferior izquierda del visualizador de la presentación o en el menú principal para ajustar los colores de toda la interfaz.
+- **Descargar:** Puedes presionar el botón `PDF` dentro de las presentaciones para autogenerar una versión PDF con cada una de las páginas cargadas en una hoja para su rápida distribución.
 
-**Stack:** React · Vite · TypeScript · Tailwind CSS
+---
 
-**Cómo ejecutar:**
+## 🛠️ Stack Tecnológico
 
-```bash
-npm install
-npm run dev
-```
+El proyecto es de arquitectura puramente Frontend de alta modernidad.
 
-Luego abrir `http://localhost:5173` en el navegador.
-
-**Navegación:**
-- `→` flecha derecha — siguiente slide
-- `←` flecha izquierda — slide anterior
-- Botón ☀️ / 🌙 en la esquina inferior izquierda para alternar entre tema claro y oscuro
+- **[React](https://react.dev/):** Para la arquitectura de componentes.
+- **[Vite](https://vitejs.dev/):** Entorno y empaquetamiento altamente optimizado y veloz.
+- **[TypeScript](https://www.typescriptlang.org/):** Base sólida enfocada en tipado robusto.
+- **[Tailwind CSS](https://tailwindcss.com/):** Estilos reactivos y clases estéticas para un diseño ágil de UI.
