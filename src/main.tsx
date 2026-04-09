@@ -5,10 +5,11 @@ import './pdf/pdf.css'
 import App from './App'
 import PdfView from './pdf/PdfView'
 import AppPrisma from './prisma/AppPrisma'
+import MainMenu from './MainMenu'
 
 const params = new URLSearchParams(window.location.search)
 const isPdf = params.has('pdf')
-const presentation = params.get('presentation') ?? 'ev-proyectos'
+const presentation = params.get('presentation')
 
 if (isPdf) {
   document.documentElement.style.overflow = 'auto'
@@ -21,7 +22,8 @@ if (isPdf) {
 function Root() {
   if (isPdf) return <PdfView />
   if (presentation === 'prisma') return <AppPrisma />
-  return <App />
+  if (presentation === 'ev-proyectos') return <App />
+  return <MainMenu />
 }
 
 createRoot(document.getElementById('root')!).render(
