@@ -6,7 +6,7 @@ const CRITERIOS = [
     ponderacion: 'Relevante',
     titulo: 'Herramientas técnicas y expertise del equipo',
     detalle: '¿El equipo dispone de las herramientas, infraestructura y perfiles especializados para desarrollar el módulo? La escasez de talento en microservicios, HL7 FHIR y seguridad en salud es el principal obstáculo diferencial de RedNorte frente a otras regiones.',
-    obstaculo: 'Competencia salarial con la industria minera genera "brain drain" técnico constante.',
+    obstaculo: 'Competencia salarial con la industria minera provoca fuga constante de personal técnico calificado hacia el sector privado.',
   },
   {
     num: '02',
