@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import duocLogo from '../assets/Logo_DuocUC.svg'
+import { downloadEp2Pdf } from './pdf/downloadEp2Pdf'
 import E01Portada from './slides/E01Portada'
 import E02Problema from './slides/E02Problema'
 import E03Alternativas from './slides/E03Alternativas'
@@ -25,6 +26,20 @@ const SLIDES = [
 export default function AppEP2() {
   const [current, setCurrent] = useState(0)
   const [light, setLight] = useState(false)
+  const [pdfMsg, setPdfMsg] = useState('')
+  const [generatingPdf, setGeneratingPdf] = useState(false)
+
+  const handlePdf = async () => {
+    setGeneratingPdf(true)
+    try {
+      await downloadEp2Pdf(setPdfMsg)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setGeneratingPdf(false)
+      setPdfMsg('')
+    }
+  }
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -84,6 +99,22 @@ export default function AppEP2() {
         >
           ← Menú
         </a>
+
+        <button
+          onClick={handlePdf}
+          disabled={generatingPdf}
+          title="Descargar presentación en PDF"
+          className="flex items-center gap-1.5 font-body text-xs px-2.5 py-1 rounded-full border transition-colors select-none"
+          style={{
+            backgroundColor: 'var(--bg-card)',
+            borderColor: 'var(--border)',
+            color: generatingPdf ? '#307FE2' : 'var(--text-label)',
+            opacity: generatingPdf ? 0.75 : 1,
+            cursor: generatingPdf ? 'default' : 'pointer',
+          }}
+        >
+          {generatingPdf ? (pdfMsg || 'Generando…') : '⬇ PDF'}
+        </button>
 
         <a
           href="https://github.com/modicl/presentaciones_evproyecto"
